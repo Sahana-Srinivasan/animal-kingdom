@@ -1,10 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
-import './index.css'
-import App from './App'
-import registerServiceWorker from './registerServiceWorker'
-import 'bootstrap/dist/css/bootstrap.css'
 
-ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'))
-registerServiceWorker()
+import App from './components/App.jsx';
+
+// Require Sass file so webpack can build it
+import bootstrap from 'bootstrap/dist/css/bootstrap.css';
+import style from './styles/style.css';
+
+ReactDOM.render((
+	<BrowserRouter>
+		<App />
+	</BrowserRouter>
+), document.getElementById('root'));
